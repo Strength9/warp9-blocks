@@ -1,0 +1,228 @@
+
+{
+			"Return text field to variable": {
+				"scope": "php, html, txt",
+				"prefix": "9t",
+				"body": [
+					"$$1 = !empty( get_field('$2','$3') ) ? get_field('$2','$3'): '';"
+				],
+				"description": "Return text field"
+			},
+			"Echo text field": {
+				"scope": "php, html, txt",
+				"prefix": "9te",
+				"body": [
+					"echo !empty( get_field('$1','$2') ) ? get_field('$1','$2'): '';"
+				],
+				"description": "Echo text field"
+			},
+
+			"Return link Array": {
+				"scope": "php, html, txt",
+				"prefix": "9la",
+				"body": [
+					"$$link = get_field('$1','$2'); ",
+					"if( $$link) {", 
+					"    $$link_url = $$link['url'];",
+					"    $$link_title = $$link['title'];",
+					"    $$link_target = $$link['target'] ? $$link['target'] : '_self';",
+					"    $$3 = '<a class=\"$4\" href=\"'.esc_url( $$link_url ).'\" target=\"'.esc_attr($$link_target).'\" title=\"'.esc_html( $$link_title ).'\">'.esc_html( $$link_title ).'</a>';",
+					"} else {",
+					"    $$3 = '';",
+					"};"
+				],
+				"description": "Return link from array"
+			},
+
+			"Return link URL": {
+				"scope": "php, html, txt",
+				"prefix": "9lu",
+				"body": [
+					"$$link = get_field('$1','$2'); ",
+					"if( $$link) {", 
+					"    $$4 = '<a class=\"$5\" href=\"'.esc_url( $$link_url ).'\">$6</a>';",
+					"} else {",
+					"    $$4 = '';",
+					"};"
+				],
+				"description": "Return link from url"
+			},
+
+			"Return Image": {
+				"scope": "php, html, txt",
+				"prefix": "9io",
+				"body": [
+					"$$image = get_field('$1','$2'); ",
+					"if( !empty( $$image ) ) {",
+					"	$$3 = '<img src=\"'.esc_url($$image['url']).'\" alt=\"'.esc_attr($$image['alt']).'\" class=\"$4\"/>';",
+					"} else {",
+					"	$$3 = '';",
+					"};"
+				],
+				"description": "Return Image"
+			},
+
+			"Return Repeater": {
+				"scope": "php, html, txt",
+				"prefix": "9rp",
+				"body": [
+					"// Check rows exists.",
+					"if( have_rows('$1','$2') ):",
+					"   $$3 = '';",
+					"while( have_rows('$1','$2') ) : the_row();",
+					"",
+					"    //$$sub_value = get_sub_field('sub_field');",
+					"	$$3 .= '';",
+					"endwhile;",
+					"",
+					"else :",
+					"	$$3 = '';",
+					"endif;"
+				],
+				"description": "Return Image"
+			},
+
+
+			"Theme Social": {
+				"scope": "php, html, txt",
+				"prefix": "9social",
+				"body": [
+					"if( have_rows('social','options') ):",
+					"$$socialul = '<ul class=\"socialul\">';",
+					"while( have_rows('social','options') ) : the_row();",
+						"$$link = get_sub_field('social_link'); ",
+						"if( $$link) {",
+						"	 $$link_url = $$link['url'];",
+							"	 $$link_title = $$link['title'];",
+							"	 $$link_target = $$link['target'] ? $$link['target'] : '_self';",
+							"	 $$socialicon = !empty( get_sub_field('social_icon') ) ? get_sub_field('social_icon').' ': '';",
+							"	 $$soclink = '<a href=\"'.esc_url( $$link_url ).'\" target=\"'.esc_attr($$link_target).'\">'.$$socialicon.esc_html( $$link_title ).'</a>';",
+					" } else {",
+					"		      $$soclink = '';",
+					"          };",
+					"     	   $$socialul .= '<li>'.$$soclink.'</li>';",
+					"        endwhile;",
+					"	     $$socialul .= '</ul>';",
+					"    else :",
+					"	     $$socialul = '';",
+					"    endif;",
+				"",
+				"echo $$socialul;",
+				],
+				"description": "Return Image"
+			},
+
+			"Return @media": {
+				"scope": "txt,css,scss",
+				"prefix": "9m",
+				"body": [
+					"@media only screen and (${1|min,max|}-width: $2px) {",
+					"  ",
+					"}"
+				],
+				"description": "Return @media"
+			},
+
+			"Return Background CSS": {
+				"scope": "php, html, txt,css,scss",
+				"prefix": "9bg",
+				"body": [
+					"background-image: url('$1');",
+					"background-repeat: ${2|no-repeat,repeat|};",
+					"background-position: ${3|left, right, center|} ${4|top, center, bottom|} ;",
+					"background-size: ${5|cover, contain|};",
+					"background-color: $6;",
+				],
+				"description": "Return BGs"
+			},
+
+			"Return Grid CSS": {
+				"scope": "txt,css,scss",
+				"prefix": "9grid",
+				"body": [
+					"display: grid;",
+					"grid-template-columns: repeat($1, 1fr);",
+					"grid-template-rows: repeat($2, minmax($3,$4));",
+					"grid-gap: $5 ;",
+					"grid-template-areas: \"$6\";",
+				],
+				"description": "Return Grid CSS"
+			},
+
+			"Return Menu": {
+				"scope": "php",
+				"prefix": "9m",
+				"body": [
+					"wp_nav_menu( array(  'menu' => '$1', ",
+					"'container'  => '$2', ",
+					"'container_class' => '$3', ",
+					"'container_id'    => '$4',   ",
+					"'depth' => ${5|1, 2, 3|} , ",
+					"'items_wrap' => '<ul>%3$$s</ul>' ) ); "			],
+				"description": "Return Menu"
+			},
+
+			"Return VAR Colours": {
+				"scope": "css,scss",
+				"prefix": "9v",
+				"body" : [
+					"color: var(${1|--page-background-color,--base-colour,--theme-filler,--theme-primary,--theme-secondary,--theme-dark,--theme-pale|});"
+				],
+				"description": "Return VAR Colours"
+			},
+
+			"Return Background VAR Colours": {
+				"scope": "css,scss",
+				"prefix": "9bv",
+				"body" : [
+					"background-color: var(${1|--page-background-color,--base-colour,--theme-filler,--theme-primary,--theme-secondary,--theme-dark,--theme-pale});"
+				],
+				"description": "Return VAR Colours"
+			},
+
+			"Return VAR Font": {
+				"scope": "css,scss",
+				"prefix": "9vf",
+				"body" : [
+					"font-family: var( ${1|--font-base,--font-base-heading|});",
+					"font-weight: var( ${2|--font-weight-light,--font-weight-regular,--font-weight-semibold|});"
+				],
+				"description": "Return VAR Font"
+			},
+
+			"Return Contact Database Info": {
+				"scope": "php, html, txt",
+				"prefix": "9contact",
+				"body": [
+					"echo ReturnContactDetails( $$type = ${1|'phone','email','whatsapp'|}, $$location = ${2|'Default','Location 1','Location 2'|}, $$wrapper = ${3|'','li','div','span'|}, $$showicon = ${4|'yes','no'|}, $$showlocation= ${5|'yes','no'|});",
+				],
+				"description": "Return Contact Database Info"
+			},
+
+			"Return Database Logo": {
+				"scope": "php, html, txt",
+				"prefix": "9Logo",
+				"body": [
+					"echo ReturnLogo($$pageposition = ${1|'Default','Header','Footer'|}, $$location = ${2|'Default','Location 1','Location 2'|});",
+				],
+				"description": "Return Database Logo"
+			},
+
+			"Return Database Address": {
+				"scope": "php, html, txt",
+				"prefix": "9Add",
+				"body": [
+					"echo ReturnAddress($$location = ${1|'Default','Location 1','Location 2'|}, $$wrapper = ${2|'','li','div','span'|});",
+				],
+				"description": "Return Database Address"
+			},
+
+			"Return Database Social Media": {
+				"scope": "php, html, txt",
+				"prefix": "9social",
+				"body": [
+					"echo ReturnSocialMediaLinks($$location = ${1|'Default','Location 1','Location 2'|}, $$wrapper = ${2|'','li','div','span'|});",
+				],
+				"description": "Return Database Social Media"
+			},
+}

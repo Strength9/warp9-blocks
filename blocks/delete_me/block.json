@@ -1,0 +1,16 @@
+{
+    "name": "delete_me",
+    "title": "delete_me",
+    "description": "",
+    "category": "theme",
+    "icon": "awards",
+    "apiVersion": 2,
+    
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "blocks/delete_me/block.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

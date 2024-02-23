@@ -1,0 +1,145 @@
+{
+    "key": "group_65bcc6ef9c2dc",
+    "title": "Clone - Fields",
+    "fields": [
+        {
+            "key": "field_65bcc6ef60f6b",
+            "label": "Locations",
+            "name": "locations",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default": "Default",
+                "RoofTop": "RoofTop",
+                "Darawan": "Darawan"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65bcc844fc6b3",
+            "label": "Icon",
+            "name": "icon_fields_contact",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "None": "None",
+                "<i class=\"fa-light fa-envelope\"><\/i>": "Email",
+                "<i class=\"fa-light fa-phone\"><\/i>": "Phone",
+                "<i class=\"fa-brands fa-whatsapp\"><\/i>": "Whatsapp",
+                "<i class=\"fa-brands fa-instagram\"><\/i>": "Instagram",
+                "<i class=\"fa-brands fa-facebook-f\"><\/i>": "Facebook",
+                "<i class=\"fa-brands fa-linkedin-in\"><\/i>": "Linked In",
+                "<i class=\"fa-brands fa-tiktok\"><\/i>": "Tik Tok",
+                "<i class=\"fa-brands fa-x-twitter\"><\/i>": "Twitter (X)"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65bccc31205c6",
+            "label": "Page Position",
+            "name": "page_position",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default": "Default",
+                "Header": "Header",
+                "Footer": "Footer"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65bccc9f205c7",
+            "label": "Image Positioning",
+            "name": "image_positioning",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "left top": "left top",
+                "left center": "left center",
+                "left bottom": "left bottom",
+                "center top": "center top",
+                "center center": "center center",
+                "center bottom": "center bottom",
+                "right top": "right top",
+                "right center": "right center",
+                "right bottom": "right bottom"
+            },
+            "default_value": "center center",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1706875934
+}

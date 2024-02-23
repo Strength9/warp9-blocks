@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"explorer.compactFolders": false,
+		"liveSassCompile.settings.generateMap": false,
+		"editor.fontSize": 18,
+		"editor.minimap.autohide": true,
+		"editor.minimap.enabled": false,
+		"diffEditor.wordWrap": "on",
+		"liveSassCompile.settings.watchOnLaunch": true,
+		"liveSassCompile.settings.rootIsWorkspace": true,
+		"liveSassCompile.settings.formats":[
+			// This is Default.
+			{
+				"format": "compressed",
+				"extensionName": ".css",
+				"savePath": null
+			}
+		],
+
+	},
+}

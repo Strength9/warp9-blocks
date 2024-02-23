@@ -1,0 +1,129 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {font-size: 100%;} /*16px*/
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0;
+    overflow-x: hidden; 
+    color: var(--base-colour);
+    font-family: var(--font-base);
+    font-weight: 200;
+    font-style: normal;
+    font-size:15px;
+    line-height:18px;
+    position:relative;
+    background-color: var(--page-background-color);
+    
+}  
+
+h1, 
+h2,
+h3,
+h4 {
+  font-family: var(--font-base-heading);
+  font-weight: 300;
+}
+h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  line-height: 1;
+
+  @media screen and (min-width: 768px) {
+    font-size: 65px;
+  }
+  
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 19px;
+  line-height: 1;
+  @media(min-width: 360px) {
+    font-size: 22px;
+  }
+}
+p {
+
+font-size: 16px;
+line-height: 1.7;
+margin-bottom: 25px;
+font-weight: 200;
+}
+
+
+
+
