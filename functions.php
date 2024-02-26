@@ -21,6 +21,7 @@ require_once get_template_directory() . '/inc/theme-disable-comments.php';
 
 
 // Acf Fields management
+require_once get_template_directory() . '/inc/theme-custom-blocks.php';
 require_once get_template_directory() . '/inc/theme-acf.php';
 require_once get_template_directory() . '/blocks/register-blocks.php';
 
@@ -30,17 +31,18 @@ require_once get_template_directory() . '/blocks/register-blocks.php';
 /*-----------------------------------------------------------------------------------*/
 
 // Google Analytics and tag manager
-require_once get_template_directory() . '/inc/theme-header-googleanalytics.php';
+// require_once get_template_directory() . '/inc/theme-header-googleanalytics.php';
 // Favicons
-require_once get_template_directory() . '/inc/theme-header-favicons.php';
+// require_once get_template_directory() . '/inc/theme-header-favicons.php';
 // Google Fonts
-require_once get_template_directory() . '/inc/theme-enques-googlefonts.php';
+// require_once get_template_directory() . '/inc/theme-enques-googlefonts.php';
 // Fontawesome
-require_once get_template_directory() . '/inc/theme-header-fontawesome.php';
+// require_once get_template_directory() . '/inc/theme-header-fontawesome.php';
 // Typekit
-require_once get_template_directory() . '/inc/theme-header-typekit.php';
+// require_once get_template_directory() . '/inc/theme-header-typekit.php';
 
 // Custom Functions
-require_once get_template_directory() . '/inc/theme-custom-functions.php';
+// require_once get_template_directory() . '/inc/theme-custom-functions.php';
+
 
 ?>

@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../../../../../new-theme/app/public/wp-content/themes/warp9-blocks/.git"
 		}
 	],
 	"settings": {

@@ -1,0 +1,13 @@
+/*!
+Theme Name: Theme Name
+Theme URI: https://strength9.co.uk
+Description: warp9 Naked Base Theme
+Author: Dave Pratt
+Author URI: https://strength9.co.uk
+Version: 1.0.1
+Text Domain: warp9
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: naked, bare, quick
+
+*/:root{--content-small: 1100px;--content-normal: 1320px;--page-background-color: #FFF;--base-colour: #000;--font-base: Arial ;--font-base-heading: Arial }*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role=list],ol[role=list]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion: reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}html{font-size:100%}body{width:100%;height:100%;margin:0;padding:0 0 0;overflow-x:hidden;color:var(--base-colour);font-family:var(--font-base);font-weight:200;font-style:normal;font-size:15px;line-height:18px;position:relative;background-color:var(--page-background-color)}h1,h2,h3,h4{font-family:var(--font-base-heading);font-weight:300}h1{font-size:50px;margin-bottom:30px;line-height:1}@media screen and (min-width: 768px){h1{font-size:65px}}h2{font-size:24px;margin-bottom:19px;line-height:1}@media(min-width: 360px){h2{font-size:22px}}p{font-size:16px;line-height:1.7;margin-bottom:25px;font-weight:200}

@@ -14,6 +14,7 @@ add_theme_support( 'wc-product-gallery-zoom' );
 add_theme_support( 'wc-product-gallery-lightbox' );
 add_theme_support( 'wc-product-gallery-slider' );
 function warp9_add_woocommerce_support() { add_theme_support( 'woocommerce' ); }
+
 add_action( 'after_setup_theme', 'warp9_add_woocommerce_support' );  
 
 if ( function_exists( 'add_theme_support' ) ) {	add_theme_support( 'post-thumbnails' );}
