@@ -6,3 +6,10 @@
 	--font-base: Arial ;
 	--font-base-heading: Arial ;
 }
+
+
+body main > div, body main > section {
+	width:90%;
+	max-width: var(--content-normal);
+	margin: 0 auto;
+}

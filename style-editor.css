@@ -1,16 +1,3 @@
-/*!
-Theme Name: Theme Name
-Theme URI: https://strength9.co.uk
-Description: warp9 Naked Base Theme
-Author: Dave Pratt
-Author URI: https://strength9.co.uk
-Version: 1.0.1
-Text Domain: warp9
-License: GNU General Public License v3 or later.
-License URI: https://www.gnu.org/licenses/gpl-3.0.html
-Tags: naked, bare, quick
-
-*/
 :root {
   --content-small: 1100px;
   --content-normal: 1320px;
@@ -163,3 +150,14 @@ p {
 }
 
 /* Master File */
+#tinymce {
+  padding-top: 0 !important;
+}
+
+.block-editor-block-list__layout .wp-block {
+  margin: 0px;
+}
+
+.wp-block {
+  max-width: 100%;
+}
