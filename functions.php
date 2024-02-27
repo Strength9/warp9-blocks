@@ -58,14 +58,13 @@ function custom_render_block_core_group (
 		!is_admin() &&
 		!wp_is_json_request()
 	) {
-		$html = '';
-
-		$block['attrs']['className'] ??= '';
-
-		// Add background color to the page section
-		//$block['attrs']['className'] .= ' theme--' . ($block['attrs']['backgroundColor'] ?? 'white');
-
-		$html .= '<section class="group ' . $block['attrs']['className'] . '">' . "\n";
+		$class = $html = '';
+		
+		if (!empty($block['attrs']['className'])) {
+			$class = ' class="'.$block['attrs']['className'] . '"';
+		};
+		
+		$html .= '<section'.$class.'>' . "\n";
 		$html .= '<div class="container">' . "\n";
 
 		if (isset($block['innerBlocks'])) {
@@ -74,8 +73,8 @@ function custom_render_block_core_group (
 			}
 		}
 
-		$html .= '</div><!--/ .container -->' . "\n";
-		$html .= '</section><!--/ .group -->' . "\n";
+		$html .= '</div>' . "\n";
+		$html .= '</section>';
 
 		return $html;
 	}
@@ -97,7 +96,7 @@ add_action( 'wp_enqueue_scripts', function() {
   wp_dequeue_style( 'classic-theme-styles' );
 } );
 
-add_filter( 'should_load_separate_core_block_assets', '__return_false' );
+add_filter( 'should_load_separate_core_block_assets', '__return_zero' );
 
 
 
@@ -118,10 +117,10 @@ function prefix_remove_core_block_styles() {
 }
 add_action( 'wp_enqueue_scripts', 'prefix_remove_core_block_styles',100 );
 
-// This line is preferably be added to your theme's functions.php file
-// with other add_theme_support() function calls.
-add_theme_support( 'disable-layout-styles' );
+
 // These two lines will probably not be necessary eventually
 remove_filter( 'render_block', 'wp_render_layout_support_flag', 10, 2 );
 remove_filter( 'render_block', 'gutenberg_render_layout_support_flag', 10, 2 );
+
+	
 ?>

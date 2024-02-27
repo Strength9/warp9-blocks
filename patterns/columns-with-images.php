@@ -1,11 +1,11 @@
 <?php
 /**
  * Title: Columns with circular images
- * Slug: xzczx/columns-with-images
+* Slug: warp9-blocks/columns-with-images
  * Categories: featured
  * Block Types: core/image, core/columns
  *
- * @package xzczx
+ * @package warp9-blocks
  * @since 1.0.0
  */
 ?>
